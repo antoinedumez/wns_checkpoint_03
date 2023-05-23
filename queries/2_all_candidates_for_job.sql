@@ -1,5 +1,11 @@
-# Écris une requêtes SQL qui retourne tous les candidats ayant répondu à l'offre
-# intitulée "Dev"
+SELECT c. *
+FROM candidate c
+JOIN offers_as_candidate oac ON c.id = oac.id_candidate
+WHERE id_offers
+LIKE "%1%";
 
-SELECT * FROM candidate WHERE id_offers LIKE "%1%";
-SELECT * FROM candidate WHERE id_offers LIKE "%2%";
+SELECT c. *
+FROM candidate c
+JOIN offers_as_candidate oac ON c.id = oac.id_candidate
+WHERE id_offers
+LIKE "%2%";

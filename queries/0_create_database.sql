@@ -1,7 +1,3 @@
-# Suit les instruction du checkpoint, en utilisant https://www.dbdesigner.net/, créer un script
-# d'initialisation de BDD SQLite et copie colle son contenu ici
-# (tu dois notmalement avoir +/- 4 instructions CREATE TABLE, chaque instructions doit bien se terminer par un ";")
-
 CREATE TABLE recruiter (
 	id integer PRIMARY KEY AUTOINCREMENT,
 	login varchar,
@@ -31,7 +27,11 @@ CREATE TABLE candidate (
 	last_name varchar,
 	email varchar,
 	phone_number varchar,
-	description text,
-	id_offers string
+	description text
 );
 
+CREATE TABLE offers_as_candidate (
+	id integer PRIMARY KEY AUTOINCREMENT,
+	id_candidate integer,
+	id_offers integer
+);
